@@ -14,7 +14,7 @@ function App() {
     var retreived = JSON.parse(localStorage.getItem("chatUser"));
     if (retreived) {
       dispatch({ type: LOGIN, payload: retreived });
-      navigate("/chat-ui/chat");
+      navigate("/chat");
     }
   }, []);
 
@@ -22,8 +22,8 @@ function App() {
     <>
       <Header />
       <Routes>
-        <Route path="/chat-ui" element={<Home />} />
-        <Route path="/chat-ui/chat" element={<Chat />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/chat" element={<Chat />} />
       </Routes>
     </>
   );

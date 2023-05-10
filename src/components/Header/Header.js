@@ -20,7 +20,7 @@ function Header() {
             <h4
               onClick={() => {
                 dispatch({ type: LOGOUT });
-                navigate("/chat-ui");
+                navigate("/");
               }}
             >
               Logout
